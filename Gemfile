@@ -13,6 +13,8 @@ gem 'rails', '~> 6.0.3', '>= 6.0.3.2'
 gem 'sprockets', '< 4'
 gem 'sassc-rails'
 
+# gem 'google-cloud-vision-v1'
+
 gem 'faker'
 
 group :development do
