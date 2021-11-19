@@ -5,5 +5,5 @@ Rails.application.routes.draw do
 
 # Read Page
  get("/pdf_miner", { :controller => "users", :action => "index" })
-
+ post("/upload", { :controller => "users", :action => "results" })
 end
