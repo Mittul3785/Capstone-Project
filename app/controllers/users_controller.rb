@@ -71,7 +71,7 @@ class UsersController < ApplicationController
 
       a_file = File.open(uploaded_data)
 
-      vision_api_results = image_annotator.web_detection({ :image => a_file })
+      vision_api_results = image_annotator.text_detection({ :image => a_file })
 
       @responses = vision_api_results.responses
 
