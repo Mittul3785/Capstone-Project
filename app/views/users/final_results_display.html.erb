@@ -1,4 +1,8 @@
+<a href="/<%= @file_to_download %>">Download CSV</a>
+
 <h1>Results Display</h1>
+
+<%= link_to("Export", "/text_results.csv", method: :post) %>
 
 <ul>
 <% @first_result.text_annotations.each_with_index do |text_annotation, index| %>
