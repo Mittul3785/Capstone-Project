@@ -1,20 +1,18 @@
-<a href="/<%= @file_to_download %>">Download CSV</a>
+     <h1>Text Results</h1>
+     <a href="/<%= @file_to_download %>">Download CSV</a>
 
-<h1>Results Display</h1>
+   <ul>
+      <% @first_result.text_annotations.each_with_index do |text_annotation, index| %>
+     <li>
+      <details>
+       <summary>
+        <code><%= index %></code>
+       </summary>
 
-<%= link_to("Export", "/text_results.csv", method: :post) %>
+      <div>
+       <%= raw(ap text_annotation['description'].to_s) %>
+      </div>
+     </li>
 
-<ul>
-<% @first_result.text_annotations.each_with_index do |text_annotation, index| %>
-    <li>
-    <details>
-    <summary>
-      <code><%= index %></code>
-    </summary>
-    <div>
-      <%= raw(ap text_annotation['description'].to_s) %>
-    </div>
-  </li>
-
-<% end %>
-</ul>
+     <% end %>
+   </ul>
